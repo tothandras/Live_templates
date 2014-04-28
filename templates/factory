@@ -1,0 +1,10 @@
+angular.module('$MODULE$').factory '$NAME$',
+    ['$log', ($log) ->
+        # service logic
+        # ...
+        $END$
+        # public API
+        {
+            # ...
+        }
+    ]

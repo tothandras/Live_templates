@@ -1,0 +1,15 @@
+if window.__karma__?
+    beforeEach module '$MODULE$'
+
+    describe 'Controller: $NAME$', ->
+        $NAME$ = $rootScope = null
+
+        injected = ($injector, $controller) ->
+            $rootScope = $injector.get('$rootScope')
+            scope = $rootScope.$new()
+            $NAME$ = $controller '$NAME$', $scope: scope
+
+        beforeEach(inject(injected))
+
+        it 'should be defined', ->
+            expect($NAME$).toBeDefined()

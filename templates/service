@@ -1,0 +1,6 @@
+angular.module('$MODULE$').service '$NAME$',
+    ['$log', ($log) ->
+        # AngularJS will instantiate a singleton by calling "new" on this function
+        $END$
+        return
+    ]

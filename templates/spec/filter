@@ -1,0 +1,13 @@
+if window.__karma__?
+    beforeEach module '$MODULE$'
+
+    describe 'Filter: $NAME$', ->
+        $NAME$ = null
+
+        injected = ($filter) ->
+            $NAME$ = $filter('$NAME$')
+
+        beforeEach(inject(injected))
+
+        it 'should be defined', ->
+            expect($NAME$).toBeDefined()

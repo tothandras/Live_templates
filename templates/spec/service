@@ -1,0 +1,14 @@
+if window.__karma__?
+    beforeEach module '$MODULE$'
+
+    describe 'Service: $NAME$', ->
+        $NAME$ = $rootScope = null
+
+        injected = ($injector) ->
+            $rootScope = $injector.get('$rootScope')
+            $NAME$ = $injector.get('$NAME$')
+
+        beforeEach (inject(injected))
+
+        it 'should be defined', ->
+            expect($NAME$).toBeDefined()

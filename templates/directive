@@ -1,0 +1,19 @@
+angular.module('$MODULE$').directive '$NAME$',
+    ['$log', ($log) ->
+        replace: $REPLACE$ # Boolean
+        restrict: 'EA' # E: Element, A: Attribute, C: Class, M: Comment
+        scope: {
+            isolated: '@' # @: interpolate, &: expression, =: data bind
+        } # Boolean or Object
+        templateUrl: 'views/directives/$NAME$.html'
+        controller: ['$scope', '$attrs', ($scope, $attrs) ->
+            self = this
+
+            this.init = (element) ->
+                self.$element = element
+
+            $END$
+        ]
+        link: (scope, element, attrs, controller) ->
+            controller.init(element)
+    ]

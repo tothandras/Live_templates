@@ -1,0 +1,7 @@
+angular.module('$MODULE$').filter '$NAME$',
+    ['$log', ($log) ->
+        (input) ->
+            $END$
+            # output
+            '$NAME$ filter: ' + input
+    ]

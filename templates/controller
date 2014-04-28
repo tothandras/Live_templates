@@ -1,0 +1,5 @@
+angular.module('$MODULE$').controller '$NAME$Controller',
+    ['$log', '$scope', ($log, $scope) ->
+        $END$
+        return
+    ]

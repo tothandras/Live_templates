@@ -1,0 +1,18 @@
+angular.module('$MODULE$').provider '$NAME$',
+    ['$log', ($log) ->
+        # private variable
+        variable = 0
+        $END$
+        # private constructor
+        class PrivateClass
+            @getVariable = ->
+                variable
+
+        # public API for configuration
+        @setVariable = (v) ->
+            variable = v
+
+        # method for instantiating
+        @$get = ->
+            new PrivateClass()
+    ]
